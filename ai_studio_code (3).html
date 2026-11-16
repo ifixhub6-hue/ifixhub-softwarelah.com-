@@ -1,0 +1,1916 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>آئی فکس ہب اینڈ سافٹ ویئر لیب | موبائل مرمت اور سافٹ ویئر کا معتبر مرکز</title>
+  <meta name="description" content="آئی فکس ہب اینڈ سافٹ ویئر لیب - محب پور شہر، گروٹ روڈ، ضلع خوشاب۔ آپ کے موبائل کی مرمت، سافٹ ویئر، فلیشنگ، ان لاکنگ اور ایکسیسریز کا قابلِ اعتماد حل۔">
+  <meta name="theme-color" content="#050811">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="آئی فکس ہب">
+
+  <!-- PWA Manifest & Icon -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23f7dc7a'/%3E%3Cstop offset='100%25' stop-color='%23b8860b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='128' height='128' rx='28' fill='%23060a14'/%3E%3Crect x='6' y='6' width='116' height='116' rx='24' fill='none' stroke='url(%23g)' stroke-width='4'/%3E%3Crect x='38' y='20' width='52' height='88' rx='10' fill='%230d1d42' stroke='url(%23g)' stroke-width='4'/%3E%3Ccircle cx='64' cy='96' r='4' fill='%23f7dc7a'/%3E%3Cpath d='M52 58 L61 67 L78 48' fill='none' stroke='%23f7dc7a' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <!-- Urdu Nastaleeq Fonts: Jameel Noori Nastaleeq + Noto Nastaliq Urdu -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jameel-noori@1.1.2/jameel-noori.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-black: #04060c;
+      --bg-deep: #070c18;
+      --bg-navy: #0b1838;
+      --bg-navy-light: #122657;
+      --card-bg: rgba(11, 22, 52, 0.62);
+      --card-bg-strong: rgba(8, 15, 36, 0.88);
+      --gold-light: #fbe38d;
+      --gold-main: #d4af37;
+      --gold-dark: #9e7614;
+      --gold-gradient: linear-gradient(135deg, #fff0b8 0%, #e4be4d 45%, #b18215 100%);
+      --gold-border: rgba(212, 175, 55, 0.34);
+      --gold-border-bright: rgba(245, 215, 118, 0.68);
+      --text-white: #f9f6ee;
+      --text-muted: #c8d2e6;
+      --whatsapp: #1eb954;
+      --whatsapp-dark: #128c3d;
+      --font-urdu: 'Jameel Noori Nastaleeq', 'Jameel-Noori.N', 'Jameel Noori Nastaliq', 'Noto Nastaliq Urdu', serif;
+      --shadow-royal: 0 22px 55px rgba(0, 0, 0, 0.65), 0 0 30px rgba(212, 175, 55, 0.08);
+      --radius-lg: 22px;
+      --radius-md: 15px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: var(--bg-black);
+    }
+
+    body {
+      font-family: var(--font-urdu);
+      background:
+        radial-gradient(circle at 85% 10%, rgba(22, 50, 120, 0.42) 0%, transparent 45%),
+        radial-gradient(circle at 12% 35%, rgba(212, 175, 55, 0.10) 0%, transparent 40%),
+        radial-gradient(circle at 80% 78%, rgba(18, 42, 102, 0.38) 0%, transparent 48%),
+        linear-gradient(180deg, #04060c 0%, #070d1e 50%, #04060c 100%);
+      color: var(--text-white);
+      line-height: 2.25;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* Subtle Royal Tech Grid Overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(212, 175, 55, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(212, 175, 55, 0.035) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: var(--font-urdu);
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .ltr-num {
+      direction: ltr;
+      unicode-bidi: isolate;
+      display: inline-block;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+    }
+
+    /* Typography Polish for Nastaleeq */
+    h1, h2, h3, h4 {
+      font-weight: 700;
+      line-height: 2;
+    }
+
+    .gold-text {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      padding: 0.2em 0.05em;
+    }
+
+    /* ===================== HEADER & NAVBAR ===================== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 8, 17, 0.86);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--gold-border);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.55);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.55rem 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .brand-icon {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.35));
+    }
+
+    .brand-title {
+      font-size: 1.25rem;
+      line-height: 1.85;
+      color: var(--gold-light);
+    }
+
+    .brand-sub {
+      font-size: 0.82rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+      font-size: 1.05rem;
+      color: var(--text-white);
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--gold-light);
+      background: rgba(212, 175, 55, 0.12);
+      border-color: var(--gold-border);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .btn-nav-call {
+      background: var(--gold-gradient);
+      color: #090c14;
+      font-weight: 700;
+      padding: 0.35rem 1.2rem;
+      border-radius: 999px;
+      font-size: 0.98rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      box-shadow: 0 4px 18px rgba(212, 175, 55, 0.32);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .btn-nav-call:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.48);
+    }
+
+    .btn-nav-install {
+      background: rgba(18, 38, 87, 0.75);
+      color: var(--gold-light);
+      border: 1px solid var(--gold-border);
+      padding: 0.35rem 0.95rem;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.25s ease;
+    }
+
+    .btn-nav-install:hover {
+      background: rgba(212, 175, 55, 0.18);
+      border-color: var(--gold-light);
+    }
+
+    .hamburger {
+      display: none;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid var(--gold-border);
+      color: var(--gold-light);
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Mobile Drawer */
+    .mobile-drawer {
+      display: none;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1rem 1.25rem 1.4rem;
+      background: rgba(6, 11, 24, 0.97);
+      border-bottom: 1px solid var(--gold-border);
+    }
+
+    .mobile-drawer.open {
+      display: flex;
+    }
+
+    .mobile-drawer a {
+      padding: 0.55rem 1rem;
+      border-radius: 12px;
+      background: rgba(18, 38, 87, 0.35);
+      border: 1px solid rgba(212, 175, 55, 0.18);
+      color: var(--text-white);
+      font-size: 1.08rem;
+    }
+
+    /* ===================== BUTTON SYSTEM ===================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      padding: 0.55rem 1.65rem;
+      border-radius: 999px;
+      font-size: 1.08rem;
+      font-weight: 700;
+      line-height: 2;
+      transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.24) 50%, transparent 70%);
+      transform: translateX(120%);
+      transition: transform 0.6s ease;
+    }
+
+    .btn:hover::after {
+      transform: translateX(-120%);
+    }
+
+    .btn-gold {
+      background: var(--gold-gradient);
+      color: #070a12;
+      box-shadow: 0 10px 28px rgba(212, 175, 55, 0.3);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 36px rgba(212, 175, 55, 0.48);
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25d366 0%, #128c3d 100%);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 10px 28px rgba(30, 185, 84, 0.3);
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 36px rgba(37, 211, 102, 0.45);
+    }
+
+    .btn-royal-outline {
+      background: rgba(14, 30, 72, 0.72);
+      color: var(--gold-light);
+      border: 1.5px solid var(--gold-main);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .btn-royal-outline:hover {
+      background: rgba(212, 175, 55, 0.16);
+      border-color: var(--gold-light);
+      transform: translateY(-3px);
+    }
+
+    /* ===================== HERO SECTION ===================== */
+    .hero {
+      padding: 3.5rem 0 4rem;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    .royal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.25rem 1.2rem;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.18), rgba(18, 38, 87, 0.7));
+      border: 1px solid var(--gold-border-bright);
+      color: var(--gold-light);
+      font-size: 0.98rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+    }
+
+    .welcome-tag {
+      font-size: 1.65rem;
+      color: var(--gold-light);
+      margin-bottom: 0.25rem;
+      display: block;
+    }
+
+    .hero-title {
+      font-size: clamp(2.1rem, 4.4vw, 3.45rem);
+      line-height: 1.95;
+      margin-bottom: 0.75rem;
+      text-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.18rem, 2vw, 1.45rem);
+      color: var(--text-muted);
+      margin-bottom: 1.85rem;
+      max-width: 650px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-quick-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .hero-quick-info span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Hero Tech Visual Card */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .tech-frame {
+      position: relative;
+      width: 100%;
+      max-width: 470px;
+      padding: 1.5rem;
+      border-radius: 30px;
+      background: linear-gradient(155deg, rgba(16, 35, 82, 0.88) 0%, rgba(5, 8, 17, 0.94) 100%);
+      border: 1.5px solid var(--gold-border-bright);
+      box-shadow: var(--shadow-royal), inset 0 0 40px rgba(212, 175, 55, 0.08);
+      animation: floatCard 6s ease-in-out infinite;
+    }
+
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .floating-chip {
+      position: absolute;
+      background: rgba(6, 11, 26, 0.92);
+      border: 1px solid var(--gold-border-bright);
+      color: var(--gold-light);
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(8px);
+    }
+
+    .chip-top {
+      top: -16px;
+      right: 20px;
+    }
+
+    .chip-bottom {
+      bottom: -16px;
+      left: 20px;
+    }
+
+    /* ===================== STATS / TRUST STRIP ===================== */
+    .trust-strip {
+      margin: 1rem 0 3.5rem;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .trust-card {
+      background: var(--card-bg);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-md);
+      padding: 1.15rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      backdrop-filter: blur(12px);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .trust-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold-light);
+    }
+
+    .trust-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid var(--gold-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+      flex-shrink: 0;
+    }
+
+    .trust-card h4 {
+      font-size: 1.12rem;
+      color: var(--gold-light);
+      line-height: 1.8;
+    }
+
+    .trust-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    /* ===================== SECTION HEADINGS ===================== */
+    .section {
+      padding: 4.5rem 0;
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 3rem;
+    }
+
+    .section-pill {
+      display: inline-block;
+      padding: 0.15rem 1.1rem;
+      border-radius: 999px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid var(--gold-border);
+      color: var(--gold-light);
+      font-size: 0.95rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.85rem, 3.4vw, 2.75rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+    }
+
+    .gold-divider {
+      width: 110px;
+      height: 3px;
+      background: var(--gold-gradient);
+      margin: 0.9rem auto 0;
+      border-radius: 999px;
+    }
+
+    /* ===================== ABOUT SECTION ===================== */
+    .about-box {
+      background: linear-gradient(145deg, rgba(13, 28, 66, 0.78), rgba(5, 8, 17, 0.92));
+      border: 1.5px solid var(--gold-border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 2.5rem;
+      align-items: center;
+      box-shadow: var(--shadow-royal);
+    }
+
+    .about-visual-card {
+      background: rgba(4, 8, 18, 0.75);
+      border: 1px solid var(--gold-border);
+      border-radius: 20px;
+      padding: 1.4rem;
+      text-align: center;
+    }
+
+    .about-lead {
+      font-size: 1.38rem;
+      color: var(--text-white);
+      line-height: 2.35;
+      margin-bottom: 1.5rem;
+      padding-right: 1rem;
+      border-right: 3px solid var(--gold-main);
+    }
+
+    .about-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .pillar {
+      background: rgba(18, 38, 87, 0.45);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 14px;
+      padding: 0.95rem;
+      text-align: center;
+    }
+
+    .pillar strong {
+      display: block;
+      color: var(--gold-light);
+      font-size: 1.08rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .pillar span {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.85;
+      display: block;
+    }
+
+    /* ===================== SERVICES SECTION ===================== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.35rem;
+    }
+
+    .service-card {
+      background: linear-gradient(160deg, rgba(13, 27, 64, 0.76) 0%, rgba(5, 8, 17, 0.92) 100%);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem 1.5rem;
+      position: relative;
+      transition: all 0.35s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      border-color: var(--gold-light);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65), 0 0 24px rgba(212, 175, 55, 0.16);
+    }
+
+    .service-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .service-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(18, 38, 87, 0.8));
+      border: 1px solid var(--gold-border-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+    }
+
+    .service-num {
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: rgba(245, 215, 118, 0.45);
+    }
+
+    .service-title {
+      font-size: 1.35rem;
+      color: var(--gold-light);
+      margin-bottom: 0.45rem;
+      line-height: 2;
+    }
+
+    .service-desc {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--gold-light);
+      font-size: 0.98rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid rgba(212, 175, 55, 0.18);
+      transition: gap 0.25s ease;
+    }
+
+    .service-card:hover .service-link {
+      gap: 0.75rem;
+    }
+
+    /* Tech Showcase Gallery */
+    .showcase-grid {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.35rem;
+    }
+
+    .showcase-card {
+      background: linear-gradient(145deg, rgba(10, 22, 54, 0.85), rgba(4, 6, 12, 0.95));
+      border: 1px solid var(--gold-border);
+      border-radius: 20px;
+      padding: 1.25rem;
+      text-align: center;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .showcase-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold-light);
+    }
+
+    .showcase-card h4 {
+      color: var(--gold-light);
+      font-size: 1.18rem;
+      margin-top: 0.6rem;
+    }
+
+    .showcase-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* ===================== CONTACT & MAP SECTION ===================== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.75rem;
+      align-items: stretch;
+    }
+
+    .contact-panel {
+      background: linear-gradient(155deg, rgba(12, 26, 62, 0.82), rgba(5, 8, 17, 0.94));
+      border: 1.5px solid var(--gold-border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-royal);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .panel-title {
+      font-size: 1.55rem;
+      color: var(--gold-light);
+      margin-bottom: 0.35rem;
+    }
+
+    .phones-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .phone-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.85rem 1.15rem;
+      border-radius: 15px;
+      background: rgba(5, 10, 24, 0.72);
+      border: 1px solid var(--gold-border);
+      transition: all 0.25s ease;
+    }
+
+    .phone-item:hover {
+      border-color: var(--gold-light);
+      background: rgba(212, 175, 55, 0.1);
+      transform: translateX(-4px);
+    }
+
+    .phone-left {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .phone-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: var(--gold-gradient);
+      color: #060912;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .phone-number {
+      font-size: 1.25rem;
+      color: var(--text-white);
+    }
+
+    .phone-label {
+      font-size: 0.88rem;
+      color: var(--gold-light);
+      display: block;
+      line-height: 1.6;
+    }
+
+    .call-tag {
+      padding: 0.25rem 0.95rem;
+      border-radius: 999px;
+      background: rgba(212, 175, 55, 0.16);
+      border: 1px solid var(--gold-border);
+      color: var(--gold-light);
+      font-size: 0.92rem;
+      white-space: nowrap;
+    }
+
+    .address-box {
+      padding: 1.2rem;
+      border-radius: 16px;
+      background: rgba(5, 10, 24, 0.72);
+      border: 1px solid var(--gold-border);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+    }
+
+    .address-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid var(--gold-border);
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.25rem;
+    }
+
+    .address-box h4 {
+      color: var(--gold-light);
+      font-size: 1.15rem;
+    }
+
+    .address-box p {
+      color: var(--text-white);
+      font-size: 1.08rem;
+    }
+
+    .map-frame-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--gold-border);
+      height: 240px;
+      background: #081229;
+      position: relative;
+    }
+
+    .map-frame-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: contrast(1.05) saturate(0.9);
+    }
+
+    /* Quick WhatsApp Inquiry Form */
+    .inquiry-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.95rem;
+    }
+
+    .form-group label {
+      display: block;
+      color: var(--gold-light);
+      font-size: 1.02rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.6rem 1rem;
+      border-radius: 12px;
+      background: rgba(4, 8, 18, 0.85);
+      border: 1px solid var(--gold-border);
+      color: var(--text-white);
+      font-family: var(--font-urdu);
+      font-size: 1rem;
+      line-height: 2;
+      transition: border-color 0.25s ease;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--gold-light);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.14);
+    }
+
+    /* ===================== PWA INSTALL BANNER ===================== */
+    .pwa-banner {
+      margin-top: 3rem;
+      background: linear-gradient(120deg, rgba(16, 36, 86, 0.92), rgba(7, 11, 22, 0.96));
+      border: 1.5px solid var(--gold-border-bright);
+      border-radius: var(--radius-lg);
+      padding: 1.65rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      box-shadow: var(--shadow-royal);
+    }
+
+    .pwa-text h3 {
+      color: var(--gold-light);
+      font-size: 1.4rem;
+    }
+
+    .pwa-text p {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+    }
+
+    /* ===================== FOOTER ===================== */
+    .footer {
+      background: #03050a;
+      border-top: 1px solid var(--gold-border);
+      padding: 2.5rem 0 5.5rem;
+      text-align: center;
+    }
+
+    .footer-brand {
+      font-size: 1.55rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin: 1rem 0;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      transition: color 0.25s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-copy {
+      color: #8b98b5;
+      font-size: 0.95rem;
+    }
+
+    /* ===================== FLOATING MOBILE ACTION DOCK ===================== */
+    .mobile-dock {
+      position: fixed;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 950;
+      background: rgba(6, 11, 24, 0.94);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--gold-border-bright);
+      border-radius: 999px;
+      padding: 0.45rem 0.65rem;
+      display: none;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.75);
+      width: calc(100% - 24px);
+      max-width: 460px;
+    }
+
+    .dock-btn {
+      flex: 1;
+      padding: 0.45rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      line-height: 1.9;
+    }
+
+    /* ===================== MODALS ===================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 4, 10, 0.82);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .modal-backdrop.show {
+      display: flex;
+    }
+
+    .modal-card {
+      width: 100%;
+      max-width: 480px;
+      background: linear-gradient(160deg, #0e1e48 0%, #050811 100%);
+      border: 1.5px solid var(--gold-border-bright);
+      border-radius: 24px;
+      padding: 1.75rem;
+      box-shadow: 0 25px 65px rgba(0, 0, 0, 0.85);
+      position: relative;
+      animation: popIn 0.25s ease;
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.94); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.14);
+      border: 1px solid var(--gold-border);
+      color: var(--gold-light);
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-title {
+      color: var(--gold-light);
+      font-size: 1.45rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .modal-sub {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    /* Scroll Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===================== RESPONSIVE BREAKPOINTS ===================== */
+    @media (max-width: 992px) {
+      .hero-grid,
+      .about-box,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .showcase-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links,
+      .nav-actions {
+        display: none;
+      }
+      .hamburger {
+        display: inline-flex;
+      }
+      .mobile-dock {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .trust-grid,
+      .about-pillars {
+        grid-template-columns: 1fr;
+      }
+      .hero {
+        padding: 2rem 0 2.5rem;
+      }
+      .section {
+        padding: 3rem 0;
+      }
+      .about-box,
+      .contact-panel {
+        padding: 1.35rem;
+      }
+      .hero-cta-group .btn {
+        width: 100%;
+      }
+      .brand-title {
+        font-size: 1.08rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#home" class="brand">
+          <svg class="brand-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="logoGold" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#fff0b8"/>
+                <stop offset="50%" stop-color="#d4af37"/>
+                <stop offset="100%" stop-color="#9e7614"/>
+              </linearGradient>
+            </defs>
+            <path d="M32 4L56 14V31C56 45.5 45.8 57.2 32 60C18.2 57.2 8 45.5 8 31V14L32 4Z" fill="#0b1838" stroke="url(#logoGold)" stroke-width="2.5"/>
+            <rect x="22" y="16" width="20" height="32" rx="4" fill="#040711" stroke="url(#logoGold)" stroke-width="2"/>
+            <path d="M27 32L31 36L38 27" stroke="#fbe38d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="32" cy="43" r="1.8" fill="#fbe38d"/>
+          </svg>
+          <div>
+            <strong class="brand-title">آئی فکس ہب اینڈ سافٹ ویئر لیب</strong>
+            <span class="brand-sub">موبائل مرمت، سافٹ ویئر اور ایکسیسریز</span>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#home" class="active">ہوم پیج</a></li>
+          <li><a href="#about">ہمارے بارے میں</a></li>
+          <li><a href="#services">ہماری خدمات</a></li>
+          <li><a href="#contact">رابطہ کریں</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button type="button" class="btn-nav-install js-install-trigger">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            ایپ انسٹال کریں
+          </button>
+          <button type="button" class="btn-nav-call js-open-call-modal">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            ابھی کال کریں
+          </button>
+        </div>
+
+        <button type="button" class="hamburger" id="menuToggle" aria-label="مینیو کھولیں">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-drawer" id="mobileDrawer">
+      <a href="#home">ہوم پیج</a>
+      <a href="#about">ہمارے بارے میں</a>
+      <a href="#services">ہماری خدمات</a>
+      <a href="#contact">رابطہ کریں</a>
+      <a href="https://wa.me/923076787374?text=%D8%A7%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85!%20%D9%85%D8%AC%DA%BE%DB%92%20%D9%85%D9%88%D8%A8%D8%A7%D8%A6%D9%84%20%DA%A9%DB%8C%20%D9%85%D8%B1%D9%85%D8%AA%20%DB%8C%D8%A7%20%D8%B3%D8%A7%D9%81%D9%B9%20%D9%88%DB%8C%D8%A6%D8%B1%20%DA%A9%DB%92%20%D8%AD%D9%88%D8%A7%D9%84%DB%92%20%D8%B3%DB%92%20%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%DA%86%D8%A7%DB%81%DB%8C%DB%92%D8%BA%DB%8C%DA%BA%DB%94" target="_blank" rel="noopener">واٹس ایپ پر رابطہ کریں</a>
+      <button type="button" class="btn btn-royal-outline js-install-trigger" style="width: 100%; margin-top: 0.35rem;">موبائل ایپ انسٹال کریں</button>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content reveal visible">
+            <div class="royal-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+              جدید ٹیکنالوجی اور معیاری موبائل لیب
+            </div>
+
+            <span class="welcome-tag">خوش آمدید!</span>
+            <h1 class="hero-title gold-text">آئی فکس ہب اینڈ سافٹ ویئر لیب</h1>
+            <p class="hero-subtitle">آپ کے موبائل کی مرمت اور سافٹ ویئر کے تمام مسائل کا قابلِ اعتماد حل۔</p>
+
+            <div class="hero-cta-group">
+              <a href="https://wa.me/923076787374?text=%D8%A7%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85!%20%D8%A2%D8%A6%DB%8C%20%D9%81%DA%A9%D8%B3%20%DB%81%D8%A8%20%D8%A7%DB%8C%D9%86%DA%88%20%D8%B3%D8%A7%D9%81%D9%B9%20%D9%88%DB%8C%D8%A6%D8%B1%20%D9%84%DB%8C%D8%A8%20%D8%B3%DB%92%20%D8%B1%D8%A7%D8%A8%D8%B7%DB%81%20%DA%A9%D8%B1%D9%86%D8%A7%20%DB%81%DB%92%DB%94" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.03 2a10 10 0 0 0-8.65 15l-1.38 5 5.15-1.35A10 10 0 1 0 12.03 2zm5.82 14.13c-.24.68-1.41 1.3-1.95 1.38-.52.08-1.18.11-1.9-.12-.44-.14-1-.33-1.72-.64-3.02-1.31-5-4.38-5.15-4.58-.15-.2-1.23-1.64-1.23-3.12 0-1.48.77-2.21 1.05-2.51.28-.3.61-.38.81-.38h.58c.19 0 .44-.07.69.53.25.6.86 2.1.94 2.25.08.15.13.33.02.53-.1.2-.15.33-.3.5-.15.18-.32.4-.45.53-.15.15-.31.32-.13.63.18.3.79 1.3 1.7 2.11 1.17 1.04 2.16 1.36 2.46 1.51.3.15.48.13.66-.08.18-.2.76-.88.96-1.18.2-.3.4-.25.68-.15.28.1 1.76.83 2.06.98.3.15.5.23.58.35.08.13.08.73-.16 1.41z"/></svg>
+                واٹس ایپ پر رابطہ کریں
+              </a>
+
+              <button type="button" class="btn btn-gold js-open-call-modal">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                ابھی کال کریں
+              </button>
+
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Mohib+Pur+Girot+Road+Khushab+Punjab+Pakistan" target="_blank" rel="noopener" class="btn btn-royal-outline">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                دکان کا راستہ دیکھیں
+              </a>
+
+              <a href="#services" class="btn btn-royal-outline">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                ہماری خدمات
+              </a>
+            </div>
+
+            <div class="hero-quick-info">
+              <span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fbe38d" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                محب پور شہر، گروٹ روڈ، ضلع خوشاب، نزد جامعہ مسجد گلزارِ مدینہ
+              </span>
+            </div>
+          </div>
+
+          <!-- Luxury Tech Artwork -->
+          <div class="hero-visual reveal visible">
+            <div class="tech-frame">
+              <div class="floating-chip chip-top">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbe38d"><circle cx="12" cy="12" r="6"/></svg>
+                ماہر موبائل و سافٹ ویئر لیب
+              </div>
+
+              <svg viewBox="0 0 420 380" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="جدید موبائل مرمت اور سافٹ ویئر لیب کی تصویر">
+                <defs>
+                  <linearGradient id="phoneBody" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#173275"/>
+                    <stop offset="50%" stop-color="#09122b"/>
+                    <stop offset="100%" stop-color="#040711"/>
+                  </linearGradient>
+                  <linearGradient id="goldRim" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#fff1bb"/>
+                    <stop offset="45%" stop-color="#d4af37"/>
+                    <stop offset="100%" stop-color="#8d650c"/>
+                  </linearGradient>
+                  <radialGradient id="glowCenter" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#d4af37" stop-opacity="0.32"/>
+                    <stop offset="100%" stop-color="#0a1636" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+
+                <!-- Ambient Glow & Circuit Rings -->
+                <circle cx="210" cy="190" r="155" fill="url(#glowCenter)"/>
+                <circle cx="210" cy="190" r="142" stroke="url(#goldRim)" stroke-opacity="0.28" stroke-dasharray="8 8" stroke-width="1.5" fill="none"/>
+                <circle cx="210" cy="190" r="115" stroke="#2c59c7" stroke-opacity="0.45" stroke-width="1.5" fill="none"/>
+
+                <!-- Circuit Lines -->
+                <path d="M35 120 H95 L118 145 M385 120 H325 L302 145 M35 260 H95 L118 235 M385 260 H325 L302 235" stroke="url(#goldRim)" stroke-width="1.8" stroke-opacity="0.55" fill="none" stroke-linecap="round"/>
+                <circle cx="35" cy="120" r="4.5" fill="#fbe38d"/>
+                <circle cx="385" cy="120" r="4.5" fill="#fbe38d"/>
+                <circle cx="35" cy="260" r="4.5" fill="#fbe38d"/>
+                <circle cx="385" cy="260" r="4.5" fill="#fbe38d"/>
+
+                <!-- Flagship Smartphone -->
+                <rect x="135" y="42" width="150" height="296" rx="24" fill="url(#phoneBody)" stroke="url(#goldRim)" stroke-width="3.5"/>
+                <rect x="145" y="54" width="130" height="272" rx="18" fill="#050a18" stroke="#1e3c88" stroke-width="1.2"/>
+                <rect x="188" y="61" width="44" height="7" rx="3.5" fill="#132654"/>
+
+                <!-- Screen Diagnostics UI -->
+                <circle cx="210" cy="148" r="42" fill="#0b1a42" stroke="url(#goldRim)" stroke-width="2.5"/>
+                <circle cx="210" cy="148" r="31" fill="none" stroke="#fbe38d" stroke-width="2" stroke-dasharray="145 40"/>
+                <!-- Microchip Icon inside Screen -->
+                <rect x="195" y="133" width="30" height="30" rx="6" fill="#070d1f" stroke="#fbe38d" stroke-width="2"/>
+                <path d="M204 148 L209 153 L217 143" stroke="#fbe38d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+                <!-- Digital Wave & Progress Bars -->
+                <rect x="164" y="210" width="92" height="10" rx="5" fill="#102352"/>
+                <rect x="164" y="210" width="76" height="10" rx="5" fill="url(#goldRim)"/>
+                <rect x="164" y="230" width="92" height="8" rx="4" fill="#102352"/>
+                <rect x="164" y="230" width="60" height="8" rx="4" fill="#3a74f2"/>
+                <rect x="164" y="248" width="92" height="8" rx="4" fill="#102352"/>
+                <rect x="164" y="248" width="84" height="8" rx="4" fill="#25d366"/>
+
+                <!-- Floating Tech Badges Left & Right -->
+                <g transform="translate(24, 162)">
+                  <rect width="74" height="54" rx="12" fill="#091534" stroke="url(#goldRim)" stroke-width="1.8"/>
+                  <path d="M26 24 L37 35 L49 20" stroke="#fbe38d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </g>
+                <g transform="translate(322, 162)">
+                  <rect width="74" height="54" rx="12" fill="#091534" stroke="url(#goldRim)" stroke-width="1.8"/>
+                  <path d="M31 20 L43 20 L38 28 L45 28 L33 41 L36 31 L29 31 Z" fill="#fbe38d"/>
+                </g>
+
+                <!-- Home Indicator -->
+                <rect x="185" y="314" width="50" height="4" rx="2" fill="url(#goldRim)"/>
+              </svg>
+
+              <div class="floating-chip chip-bottom">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#25d366" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                ۱۰۰٪ معیاری و قابلِ اعتماد کام
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TRUST HIGHLIGHTS ===================== -->
+    <section class="trust-strip">
+      <div class="container">
+        <div class="trust-grid reveal">
+          <div class="trust-card">
+            <div class="trust-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h4>معیاری مرمت</h4>
+              <p>جدید مشینوں اور اصل پرزہ جات کے ساتھ محفوظ کام</p>
+            </div>
+          </div>
+          <div class="trust-card">
+            <div class="trust-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div>
+              <h4>تیز رفتار سروس</h4>
+              <p>کم وقت میں سافٹ ویئر اور ہارڈویئر مسائل کا مکمل حل</p>
+            </div>
+          </div>
+          <div class="trust-card">
+            <div class="trust-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/></svg>
+            </div>
+            <div>
+              <h4>سافٹ ویئر لیب</h4>
+              <p>تازہ ترین فلیشنگ، ان لاکنگ اور سافٹ ویئر انسٹالیشن</p>
+            </div>
+          </div>
+          <div class="trust-card">
+            <div class="trust-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <div>
+              <h4>بہترین کسٹمر سروس</h4>
+              <p>ایمانداری، مناسب نرخ اور صارفین کا مکمل اطمینان</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT SECTION ===================== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-pill">ہمارے بارے میں</span>
+          <h2 class="section-title gold-text">ہمارا تعارف</h2>
+          <p class="section-desc">ٹیکنالوجی کے جدید تقاضوں کے مطابق آپ کے قیمتی موبائل فون کی بہترین نگہداشت</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="about-box reveal">
+          <div class="about-visual-card">
+            <svg viewBox="0 0 360 280" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="موبائل ہارڈویئر اور چپ لیول مرمت">
+              <defs>
+                <linearGradient id="labGold" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#fff1b8"/>
+                  <stop offset="100%" stop-color="#b8860b"/>
+                </linearGradient>
+              </defs>
+              <rect x="20" y="20" width="320" height="240" rx="20" fill="#071026" stroke="url(#labGold)" stroke-width="2"/>
+              <!-- Motherboard / Chipset Grid -->
+              <rect x="115" y="75" width="130" height="130" rx="16" fill="#0d1e4a" stroke="url(#labGold)" stroke-width="2.5"/>
+              <rect x="142" y="102" width="76" height="76" rx="10" fill="#050a18" stroke="#fbe38d" stroke-width="2"/>
+              <circle cx="180" cy="140" r="18" fill="none" stroke="url(#labGold)" stroke-width="2.5"/>
+              <path d="M172 140 L178 146 L190 133" stroke="#25d366" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <!-- Chip Pins -->
+              <g stroke="url(#labGold)" stroke-width="3" stroke-linecap="round">
+                <line x1="138" y1="58" x2="138" y2="75"/><line x1="166" y1="58" x2="166" y2="75"/><line x1="194" y1="58" x2="194" y2="75"/><line x1="222" y1="58" x2="222" y2="75"/>
+                <line x1="138" y1="205" x2="138" y2="222"/><line x1="166" y1="205" x2="166" y2="222"/><line x1="194" y1="205" x2="194" y2="222"/><line x1="222" y1="205" x2="222" y2="222"/>
+                <line x1="95" y1="102" x2="115" y2="102"/><line x1="95" y1="140" x2="115" y2="140"/><line x1="95" y1="178" x2="115" y2="178"/>
+                <line x1="245" y1="102" x2="265" y2="102"/><line x1="245" y1="140" x2="265" y2="140"/><line x1="245" y1="178" x2="265" y2="178"/>
+              </g>
+            </svg>
+            <p style="color: var(--gold-light); font-size: 1.05rem; margin-top: 0.4rem;">جدید سافٹ ویئر اور مائیکرو ہارڈویئر لیب</p>
+          </div>
+
+          <div>
+            <p class="about-lead">
+              ہم اپنے صارفین کو موبائل فون کی مرمت، سافٹ ویئر اور ایکسیسریز کی بہترین خدمات فراہم کرتے ہیں۔ ہمارا مقصد معیاری کام اور بہترین کسٹمر سروس ہے۔
+            </p>
+
+            <div class="about-pillars">
+              <div class="pillar">
+                <strong>اعلیٰ معیار</strong>
+                <span>ہر فون کی تشخیص جدید آلات کے ذریعے کی جاتی ہے</span>
+              </div>
+              <div class="pillar">
+                <strong>مکمل رازداری</strong>
+                <span>صارف کے ذاتی ڈیٹا کی حفاظت ہماری اولین ترجیح ہے</span>
+              </div>
+              <div class="pillar">
+                <strong>ماہر ٹیم</strong>
+                <span>سافٹ ویئر اور ہارڈویئر کے تجربہ کار ماہرین</span>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 0.85rem;">
+              <button type="button" class="btn btn-gold js-open-call-modal">ابھی کال کریں</button>
+              <a href="#contact" class="btn btn-royal-outline">رابطہ کریں</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES SECTION ===================== -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-pill">مکمل موبائل حل</span>
+          <h2 class="section-title gold-text">ہماری خدمات</h2>
+          <p class="section-desc">ہر برانڈ کے اسمارٹ فون کے لیے ہارڈویئر، سافٹ ویئر اور ایکسیسریز کی مکمل سہولیات</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <article class="service-card reveal">
+            <div>
+              <div class="service-top">
+                <div class="service-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                </div>
+                <span class="service-num">۱</span>
+              </div>
+              <h3 class="service-title">ہر قسم کے موبائل فون کی مرمت۔</h3>
+              <p class="service-desc">اینڈرائیڈ اور آئی فون سمیت تمام موبائل فونز کی اسکرین، بیٹری، چارجنگ پورٹ اور دیگر تمام خرابیوں کی ماہرانہ مرمت۔</p>
+            </div>
+            <a href="https://wa.me/923076787374?text=%D8%A7%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85!%20%D9%85%D8%AC%DA%BE%DB%92%20%D9%85%D9%88%D8%A8%D8%A7%D8%A6%D9%84%20%D9%81%D9%88%D9%86%20%DA%A9%DB%8C%20%D9%85%D8%B1%D9%85%D8%AA%20%DA%A9%DB%92%20%D8%A8%D8%A7%D8%B1%DB%92%20%D9%85%DB%8C%DA%BA%20%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%DA%86%D8%A7%DB%81%DB%8C%DB%92%DA%BA%DB%94" target="_blank" rel="noopener" class="service-link">
+              واٹس ایپ پر رابطہ کریں ←
+            </a>
+          </article>
+
+          <!-- Service 2 -->
+          <article class="service-card reveal">
+            <div>
+              <div class="service-top">
+                <div class="service-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                </div>
+                <span class="service-num">۲</span>
+              </div>
+              <h3 class="service-title">موبائل سافٹ ویئر انسٹالیشن۔</h3>
+              <p class="service-desc">تمام ماڈلز کے لیے آفیشل سافٹ ویئر، فرم ویئر اور ضروری ایپلیکیشنز کی محفوظ اور تیز ترین انسٹالیشن۔</p>
+            </div>
+            <a href="https://wa.me/923076787374?text=%D8%A7%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85!%20%D9%85%D8%AC%DA%BE%DB%92%20%D9%85%D9%88%D8%A8%D8%A7%D8%A6%D9%84%20%D8%B3%D8%A7%D9%81%D9%B9%20%D9%88%DB%8C%D8%A6%D8%B1%20%D8%A7%D9%86%D8%B3%D9%B9%D8%A7%D9%84%DB%8C%D8%B4%D9%86%20%DA%A9%D8%B1%D9%88%D8%A7%D9%86%DB%8C%20%DB%81%DB%92%DB%94" target="_blank" rel="noopener" class="service-link">
+              واٹس ایپ پر رابطہ کریں ←
+            </a>
+          </article>
+
+          <!-- Service 3 -->
+          <article class="service-card reveal">
+            <div>
+              <div class="service-top">
+                <div class="service-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
+                <span class="service-num">۳</span>
+              </div>
+              <h3 class="service-title">موبائل فلیشنگ۔</h3>
+              <p class="service-desc">لوگو پر رک جانے والے، ہینگ ہونے والے یا سسٹم کریش موبائل فونز کی جدید ٹولز کے ذریعے مکمل فلیشنگ۔</p>
+            </div>
+            <a href="https://wa.me/923076787374?text=%D8%A7%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85!%20%D9%85%D8%AC%DA%BE%DB%92%20%D9%85%D9%88%D8%A8%D8%A7%D8%A6%D9%84%20%D9%81%D9%84%DB%8C%D8%B4%D9%86%DA%AF%20%DA%A9%D8%B1%D9%88%D8%A7%D9%86%DB%8C%20%DB%81%DB%92%DB%94" target="_blank" rel="noopener" class="service-link">
+              واٹس ایپ پر رابطہ کریں ←
+            </a>
+          </article>
+
+          <!-- Service 4 -->
+          <article class="service-card reveal">
+            <div>
+              <div class="service-top">
+                <div class="service-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+                </div>
+                <span class="service-num">۴</span>
+              </div>
+              <h3 class="service-title">موبائل ان لاکنگ۔</h3>
+              <p class="service-desc">بھولے ہوئے پیٹرن، پن لاک، ایف آر پی، آئی کلاؤڈ اور نیٹ ورک لاک کھولنے کی تیز اور محفوظ سہولت۔</p>
+            </div>
+            <a href="https://wa.me/923076787374?text=%D8%A7%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85!%20%D9%85%D8%AC%DA%BE%DB%92%20%D9%85%D9%88%D8%A8%D8%A7%D8%A6%D9%84%20%D8%A7%D9%86%20%D9%84%D8%A7%DA%A9%D9%86%DA%AF%20%DA%A9%DB%92%20%D8%AD%D9%88%D8%A7%D9%84%DB%92%20%D8%B3%DB%92%20%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%DA%86%D8%A7%DB%81%DB%8C%DB%92%DA%BA%DB%94" target="_blank" rel="noopener" class="service-link">
+              واٹس ایپ پر رابطہ کریں ←
+            </a>
+          </article>
+
+          <!-- Service 5 -->
+          <article class="service-card reveal">
+            <div>
+              <div class="service-top">
+                <div class="service-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+                <span class="service-num">۵</span>
+              </div>
+              <h3 class="service-title">موبائل سافٹ ویئر کے مسائل کا حل۔</h3>
+              <p class="service-desc">وائرس، بار بار ری اسٹارٹ ہونا، سست رفتار، ایپ ایررز اور اپ ڈیٹ کے تمام مسائل کا مستقل حل۔</p>
+            </div>
+            <a href="https://wa.me/923076787374?text=%D8%A7%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85!%20%D9%85%DB%8C%D8%B1%DB%92%20%D9%85%D9%88%D8%A8%D8%A7%D8%A6%D9%84%20%D9%85%DB%8C%DA%BA%20%D8%B3%D8%A7%D9%81%D9%B9%20%D9%88%DB%8C%D8%A6%D8%B1%20%DA%A9%D8%A7%20%D9%85%D8%B3%D8%A6%D9%84%DB%81%20%DB%81%DB%92%DB%94" target="_blank" rel="noopener" class="service-link">
+              واٹس ایپ پر رابطہ کریں ←
+            </a>
+          </article>
+
+          <!-- Service 6 -->
+          <article class="service-card reveal">
+            <div>
+              <div class="service-top">
+                <div class="service-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                </div>
+                <span class="service-num">۶</span>
+              </div>
+              <h3 class="service-title">موبائل ہارڈویئر کی مرمت۔</h3>
+              <p class="service-desc">مدر بورڈ، آئی سی، پاور، نیٹ ورک، اسپیکر، مائیک اور پانی میں گرے موبائل کی باریک بینی سے ہارڈویئر مرمت۔</p>
+            </div>
+            <a href="https://wa.me/923076787374?text=%D8%A7%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85!%20%D9%85%D8%AC%DA%BE%DB%92%20%D9%85%D9%88%D8%A8%D8%A7%D8%A6%D9%84%20%DB%81%D8%A7%D8%B1%DA%88%D9%88%DB%8C%D8%A6%D8%B1%20%DA%A9%DB%8C%20%D9%85%D8%B1%D9%85%D8%AA%20%DA%A9%D8%B1%D9%88%D8%A7%D9%86%DB%8C%20%DB%81%DB%92%DB%94" target="_blank" rel="noopener" class="service-link">
+              واٹس ایپ پر رابطہ کریں ←
+            </a>
+          </article>
+
+          <!-- Service 7 -->
+          <article class="service-card reveal">
+            <div>
+              <div class="service-top">
+                <div class="service-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+                </div>
+                <span class="service-num">۷</span>
+              </div>
+              <h3 class="service-title">ہر قسم کی موبائل ایکسیسریز دستیاب۔</h3>
+              <p class="service-desc">اوریجنل چارجرز، ڈیٹا کیبلز، ہینڈز فری، ایئر بڈز، پاور بینکس، پروٹیکٹرز اور جدید موبائل کورز۔</p>
+            </div>
+            <a href="https://wa.me/923076787374?text=%D8%A7%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85!%20%D9%85%D8%AC%DA%BE%DB%92%20%D9%85%D9%88%D8%A8%D8%A7%D8%A6%D9%84%20%D8%A7%DB%8C%DA%A9%D8%B3%DB%8C%D8%B3%D8%B1%DB%8C%D8%B2%20%DA%A9%DB%92%20%D8%A8%D8%A7%D8%B1%DB%92%20%D9%85%DB%8C%DA%BA%20%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%DA%86%D8%A7%DB%81%DB%8C%DB%92%DA%BA%DB%94" target="_blank" rel="noopener" class="service-link">
+              واٹس ایپ پر رابطہ کریں ←
+            </a>
+          </article>
+        </div>
+
+        <!-- Visual Technology Gallery -->
+        <div class="showcase-grid reveal">
+          <div class="showcase-card">
+            <svg viewBox="0 0 300 150" width="100%" height="130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="اسمارٹ فون ڈسپلے اور ہارڈویئر مرمت">
+              <rect x="10" y="10" width="280" height="130" rx="14" fill="#060e24" stroke="#d4af37" stroke-opacity="0.45"/>
+              <rect x="95" y="25" width="110" height="100" rx="12" fill="#0e2050" stroke="#fbe38d" stroke-width="2"/>
+              <path d="M125 65 L145 85 L178 48" stroke="#25d366" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <circle cx="52" cy="75" r="20" fill="none" stroke="#d4af37" stroke-width="2"/>
+              <circle cx="248" cy="75" r="20" fill="none" stroke="#d4af37" stroke-width="2"/>
+            </svg>
+            <h4>پروفیشنل موبائل ریپیئرنگ</h4>
+            <p>اسکرین، بیٹری اور چارجنگ سسٹم کی معیاری تبدیلی</p>
+          </div>
+
+          <div class="showcase-card">
+            <svg viewBox="0 0 300 150" width="100%" height="130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="سافٹ ویئر اور فلیشنگ ٹیکنالوجی">
+              <rect x="10" y="10" width="280" height="130" rx="14" fill="#060e24" stroke="#d4af37" stroke-opacity="0.45"/>
+              <path d="M40 95 Q95 35 150 75 T260 55" stroke="#fbe38d" stroke-width="3" fill="none"/>
+              <circle cx="150" cy="75" r="26" fill="#0d1e4a" stroke="#fbe38d" stroke-width="2"/>
+              <polygon points="148,59 160,75 151,75 154,91 140,73 149,73" fill="#fbe38d"/>
+            </svg>
+            <h4>ہائی اسپیڈ سافٹ ویئر لیب</h4>
+            <p>فلیشنگ، ان لاکنگ اور سسٹم بحالی کا جدید نظام</p>
+          </div>
+
+          <div class="showcase-card">
+            <svg viewBox="0 0 300 150" width="100%" height="130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="موبائل ایکسیسریز کلیکشن">
+              <rect x="10" y="10" width="280" height="130" rx="14" fill="#060e24" stroke="#d4af37" stroke-opacity="0.45"/>
+              <path d="M105 90 V70 A45 45 0 0 1 195 70 V90" stroke="#fbe38d" stroke-width="4" fill="none"/>
+              <rect x="92" y="78" width="20" height="36" rx="8" fill="#12275c" stroke="#fbe38d" stroke-width="2"/>
+              <rect x="188" y="78" width="20" height="36" rx="8" fill="#12275c" stroke="#fbe38d" stroke-width="2"/>
+              <rect x="135" y="65" width="30" height="46" rx="6" fill="#0a1638" stroke="#d4af37" stroke-width="2"/>
+            </svg>
+            <h4>معیاری موبائل ایکسیسریز</h4>
+            <p>تیز چارجرز، ایئر بڈز، کورز اور مضبوط گلاس پروٹیکٹر</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT & MAP SECTION ===================== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-pill">ہمیشہ آپ کی خدمت میں</span>
+          <h2 class="section-title gold-text">رابطہ کریں</h2>
+          <p class="section-desc">فون کال، واٹس ایپ یا ہماری دکان پر تشریف لا کر فوری رہنمائی حاصل کریں</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left/Right Panel 1: Numbers & Location -->
+          <div class="contact-panel reveal">
+            <div>
+              <h3 class="panel-title">رابطہ نمبرز (کلک کر کے فوری کال کریں)</h3>
+              <div class="phones-list">
+                <a href="tel:+923076787374" class="phone-item">
+                  <div class="phone-left">
+                    <div class="phone-badge">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <div>
+                      <span class="phone-label">مرکزی رابطہ و واٹس ایپ نمبر</span>
+                      <span class="phone-number ltr-num">0307-6787374</span>
+                    </div>
+                  </div>
+                  <span class="call-tag">ابھی کال کریں</span>
+                </a>
+
+                <a href="tel:+923026341654" class="phone-item">
+                  <div class="phone-left">
+                    <div class="phone-badge">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <div>
+                      <span class="phone-label">دوسرا رابطہ نمبر</span>
+                      <span class="phone-number ltr-num">0302-6341654</span>
+                    </div>
+                  </div>
+                  <span class="call-tag">ابھی کال کریں</span>
+                </a>
+
+                <a href="tel:+923713765334" class="phone-item">
+                  <div class="phone-left">
+                    <div class="phone-badge">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <div>
+                      <span class="phone-label">تیسرا رابطہ نمبر</span>
+                      <span class="phone-number ltr-num">0371-3765334</span>
+                    </div>
+                  </div>
+                  <span class="call-tag">ابھی کال کریں</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="address-box">
+              <div class="address-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h4>دکان کا پتہ:</h4>
+                <p>محب پور شہر، گروٹ روڈ، ضلع خوشاب، نزد جامعہ مسجد گلزارِ مدینہ۔</p>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 0.85rem;">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Mohib+Pur+Girot+Road+Khushab+Punjab+Pakistan" target="_blank" rel="noopener" class="btn btn-gold" style="flex: 1;">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                دکان کا راستہ دیکھیں
+              </a>
+              <a href="https://wa.me/923076787374?text=%D8%A7%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85!%20%D9%85%D8%AC%DA%BE%DB%92%20%D8%AF%DA%A9%D8%A7%D9%86%20%DA%A9%DB%8C%20%D9%84%D9%88%DA%A9%DB%8C%D8%B4%D9%86%20%D8%A7%D9%88%D8%B1%20%D9%85%D8%B2%DB%8C%D8%AF%20%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%DA%86%D8%A7%DB%81%DB%8C%DB%92%DA%BA%DB%94" target="_blank" rel="noopener" class="btn btn-whatsapp" style="flex: 1;">
+                واٹس ایپ پر رابطہ کریں
+              </a>
+            </div>
+          </div>
+
+          <!-- Panel 2: Interactive Google Map + Direct WhatsApp Form -->
+          <div class="contact-panel reveal">
+            <div>
+              <h3 class="panel-title">گوگل میپس پر دکان کا نقشہ</h3>
+              <div class="map-frame-wrap">
+                <iframe
+                  title="آئی فکس ہب اینڈ سافٹ ویئر لیب کا نقشہ"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  src="https://maps.google.com/maps?q=Mohib+Pur,+Girot+Road,+Khushab,+Punjab,+Pakistan&t=&z=14&ie=UTF8&iwloc=&output=embed">
+                </iframe>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="panel-title" style="margin-bottom: 0.65rem;">واٹس ایپ پر فوری پیغام بھیجیں</h3>
+              <form id="whatsappForm" class="inquiry-form">
+                <div class="form-group">
+                  <label for="custName">آپ کا نام</label>
+                  <input type="text" id="custName" class="form-control" placeholder="اپنا نام درج کریں" required>
+                </div>
+                <div class="form-group">
+                  <label for="custService">سروس کا انتخاب کریں</label>
+                  <select id="custService" class="form-control">
+                    <option value="ہر قسم کے موبائل فون کی مرمت">ہر قسم کے موبائل فون کی مرمت</option>
+                    <option value="موبائل سافٹ ویئر انسٹالیشن">موبائل سافٹ ویئر انسٹالیشن</option>
+                    <option value="موبائل فلیشنگ">موبائل فلیشنگ</option>
+                    <option value="موبائل ان لاکنگ">موبائل ان لاکنگ</option>
+                    <option value="موبائل سافٹ ویئر کے مسائل کا حل">موبائل سافٹ ویئر کے مسائل کا حل</option>
+                    <option value="موبائل ہارڈویئر کی مرمت">موبائل ہارڈویئر کی مرمت</option>
+                    <option value="موبائل ایکسیسریز کی خریداری">موبائل ایکسیسریز کی خریداری</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="custMsg">موبائل ماڈل اور مسئلہ تحریر کریں</label>
+                  <textarea id="custMsg" rows="2" class="form-control" placeholder="مثلاً: موبائل کا نام اور درپیش مسئلہ لکھیں..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-whatsapp" style="width: 100%;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.03 2a10 10 0 0 0-8.65 15l-1.38 5 5.15-1.35A10 10 0 1 0 12.03 2z"/></svg>
+                  واٹس ایپ پر رابطہ کریں
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Android App Install Card -->
+        <div class="pwa-banner reveal">
+          <div class="pwa-text">
+            <h3>موبائل کی ہوم اسکرین پر ایپ کی طرح انسٹال کریں</h3>
+            <p>تیز ترین رسائی، ون ٹیپ کال اور واٹس ایپ سہولت کے لیے ہماری ویب سائٹ کو اپنے اینڈرائیڈ موبائل میں بطور ایپ محفوظ کریں۔</p>
+          </div>
+          <button type="button" class="btn btn-gold js-install-trigger">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            اینڈرائیڈ ایپ انسٹال کریں
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand gold-text">آئی فکس ہب اینڈ سافٹ ویئر لیب</div>
+      <p style="color: var(--text-muted);">محب پور شہر، گروٹ روڈ، ضلع خوشاب، نزد جامعہ مسجد گلزارِ مدینہ۔</p>
+      <div class="footer-links">
+        <a href="#home">ہوم پیج</a>
+        <a href="#about">ہمارے بارے میں</a>
+        <a href="#services">ہماری خدمات</a>
+        <a href="#contact">رابطہ کریں</a>
+      </div>
+      <p class="footer-copy">جملہ حقوق محفوظ ہیں © ۲۰۲۶ — آئی فکس ہب اینڈ سافٹ ویئر لیب</p>
+    </div>
+  </footer>
+
+  <!-- ===================== FLOATING MOBILE ACTION BAR ===================== -->
+  <div class="mobile-dock">
+    <button type="button" class="dock-btn btn-gold js-open-call-modal">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      ابھی کال کریں
+    </button>
+    <a href="https://wa.me/923076787374?text=%D8%A7%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85!" target="_blank" rel="noopener" class="dock-btn btn-whatsapp">
+      واٹس ایپ
+    </a>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=Mohib+Pur+Girot+Road+Khushab+Punjab+Pakistan" target="_blank" rel="noopener" class="dock-btn btn-royal-outline">
+      راستہ دیکھیں
+    </a>
+  </div>
+
+  <!-- ===================== CALL SELECTION MODAL ===================== -->
+  <div class="modal-backdrop" id="callModal" role="dialog" aria-modal="true" aria-labelledby="callModalTitle">
+    <div class="modal-card">
+      <button type="button" class="modal-close" data-close-modal="callModal" aria-label="بند کریں">×</button>
+      <h3 class="modal-title" id="callModalTitle">ابھی کال کریں</h3>
+      <p class="modal-sub">فوری کال شروع کرنے کے لیے نیچے دیے گئے کسی بھی نمبر پر کلک کریں:</p>
+      <div class="phones-list">
+        <a href="tel:+923076787374" class="phone-item">
+          <div class="phone-left">
+            <div class="phone-badge">۱</div>
+            <span class="phone-number ltr-num">0307-6787374</span>
+          </div>
+          <span class="call-tag">کال ملائیں</span>
+        </a>
+        <a href="tel:+923026341654" class="phone-item">
+          <div class="phone-left">
+            <div class="phone-badge">۲</div>
+            <span class="phone-number ltr-num">0302-6341654</span>
+          </div>
+          <span class="call-tag">کال ملائیں</span>
+        </a>
+        <a href="tel:+923713765334" class="phone-item">
+          <div class="phone-left">
+            <div class="phone-badge">۳</div>
+            <span class="phone-number ltr-num">0371-3765334</span>
+          </div>
+          <span class="call-tag">کال ملائیں</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== PWA INSTALL GUIDE MODAL ===================== -->
+  <div class="modal-backdrop" id="installModal" role="dialog" aria-modal="true" aria-labelledby="installModalTitle">
+    <div class="modal-card">
+      <button type="button" class="modal-close" data-close-modal="installModal" aria-label="بند کریں">×</button>
+      <h3 class="modal-title" id="installModalTitle">موبائل ایپ انسٹال کریں</h3>
+      <p class="modal-sub">ویب سائٹ کو اینڈرائیڈ موبائل کی ہوم اسکرین پر ایپ کی طرح محفوظ کرنے کا آسان طریقہ:</p>
+      <ol style="padding-right: 1.4rem; color: var(--text-white); line-height: 2.3; margin-bottom: 1.2rem;">
+        <li>اپنے موبائل کے کروم (Chrome) براؤزر کے اوپر دائیں کونے میں موجود <strong>تین نقطوں (⋮)</strong> پر کلک کریں۔</li>
+        <li>فہرست میں سے <strong>«ہوم اسکرین میں شامل کریں» (Add to Home screen)</strong> یا <strong>«ایپ انسٹال کریں»</strong> کا انتخاب کریں۔</li>
+        <li><strong>«انسٹال»</strong> دبائیں — چند سیکنڈ میں ایپ آپ کی ہوم اسکرین پر آ جائے گی!</li>
+      </ol>
+      <button type="button" class="btn btn-gold" style="width: 100%;" data-close-modal="installModal">سمجھ گیا</button>
+    </div>
+  </div>
+
+  <script>
+    // 1. Mobile Navigation Drawer
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+
+    menuToggle.addEventListener('click', () => {
+      mobileDrawer.classList.toggle('open');
+    });
+
+    mobileDrawer.querySelectorAll('a, button').forEach(item => {
+      item.addEventListener('click', () => {
+        mobileDrawer.classList.remove('open');
+      });
+    });
+
+    // 2. Active Nav Link Highlight on Scroll
+    const navAnchors = document.querySelectorAll('.nav-links a');
+    const sections = document.querySelectorAll('main section[id]');
+
+    window.addEventListener('scroll', () => {
+      let current = 'home';
+      sections.forEach(sec => {
+        const top = sec.offsetTop - 130;
+        if (window.scrollY >= top) current = sec.getAttribute('id');
+      });
+      navAnchors.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === `#${current}`);
+      });
+    }, { passive: true });
+
+    // 3. Modals (Call Modal & Install Guide Modal)
+    const callModal = document.getElementById('callModal');
+    const installModal = document.getElementById('installModal');
+
+    document.querySelectorAll('.js-open-call-modal').forEach(btn => {
+      btn.addEventListener('click', () => callModal.classList.add('show'));
+    });
+
+    document.querySelectorAll('[data-close-modal]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.getElementById(btn.getAttribute('data-close-modal')).classList.remove('show');
+      });
+    });
+
+    [callModal, installModal].forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.remove('show');
+      });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        callModal.classList.remove('show');
+        installModal.classList.remove('show');
+      }
+    });
+
+    // 4. Direct WhatsApp Message Builder
+    document.getElementById('whatsappForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('custName').value.trim();
+      const service = document.getElementById('custService').value;
+      const msg = document.getElementById('custMsg').value.trim();
+
+      const fullText =
+        `السلام علیکم!%0A` +
+        `میرا نام: ${encodeURIComponent(name)}%0A` +
+        `مطلوبہ خدمت: ${encodeURIComponent(service)}%0A` +
+        `تفصیل: ${encodeURIComponent(msg)}`;
+
+      window.open(`https://wa.me/923076787374?text=${fullText}`, '_blank', 'noopener');
+    });
+
+    // 5. Scroll Reveal Animation
+    const revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealEls.forEach(el => observer.observe(el));
+    } else {
+      revealEls.forEach(el => el.classList.add('visible'));
+    }
+
+    // 6. PWA Installation & Service Worker Registration
+    let deferredPrompt = null;
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+    });
+
+    document.querySelectorAll('.js-install-trigger').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          await deferredPrompt.userChoice;
+          deferredPrompt = null;
+        } else {
+          installModal.classList.add('show');
+        }
+      });
+    });
+
+    if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>
